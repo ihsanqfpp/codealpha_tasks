@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="player">
+        <img src="img.jpg" class="cover" alt="Album Cover">
+        <div class="title">Song Title</div>
+        <audio id="audio" src="Jaane Tu - Chhaava 128 Kbps.mp3"></audio>
+        
+        <div class="progress-container">
+            <input type="range" id="progress" class="progress" value="0" step="1" min="0">
+            <div id="time-display">0:00 / 0:00</div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="seekBackward()" title="Rewind">⏪</button>
+            <button onclick="playAudio()" title="Play">▶</button>
+            <button onclick="pauseAudio()" title="Pause">⏸</button>
+            <button onclick="stopAudio()" title="Stop">⏹</button>
+            <button onclick="seekForward()" title="Forward">⏩</button>
+        </div>
+        
+        <div class="volume-container">
+            <span>🔊</span>
+            <input type="range" id="volume" class="volume" step="0.1" min="0" max="1" value="1" onchange="changeVolume()">
+            <button onclick="toggleMute()" title="Mute/Unmute">🔇</button>
+        </div>
+    </div>
+    
+    <script src="script.js"> </script>
+</body>
+</html>
